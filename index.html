@@ -1,39 +1,208 @@
-# street.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Street0 Code</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: monospace;
-    }
-    .top {
-      padding: 16px;
-      border-bottom: 1px solid #222;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border: 1px solid #555;
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-    }
-    .btn:hover {
-      background: #111;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Street0 Code</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --bg: #0b0b0b;
+  --panel: #111;
+  --border: #222;
+  --text: #eaeaea;
+  --muted: #888;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: monospace;
+}
+
+header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  color: var(--text);
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 24px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.ascii-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.ascii-block pre {
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.copy-btn:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+</style>
+
+<script>
+function copyAscii(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+}
+</script>
 </head>
+
 <body>
 
-  <div class="top">
-    <a class="btn" href="/catdance">Ascii Batch (curl)</a>
+<header>
+  <h1>Street0 Code</h1>
+  <nav>
+    <a href="#ascii">ASCII</a>
+  </nav>
+</header>
+
+<main id="ascii">
+  <div class="section-title">ASCII Collection</div>
+
+  <!-- ASCII 1 -->
+  <div class="ascii-block">
+    <button class="copy-btn" onclick="copyAscii('a1')">Copy</button>
+    <pre id="a1">
+        /\
+       /  \
+       \/\/
+        ~|
+       !~~-!
+       |` ,!
+       |'` |
+       |   |
+       |   |
+       |   |
+       |   |
+       |   |
+_______|___|_______
+\                 /
+ \_______________/
+    </pre>
   </div>
+
+  <!-- ASCII 2 -->
+  <div class="ascii-block">
+    <button class="copy-btn" onclick="copyAscii('a2')">Copy</button>
+    <pre id="a2">
+                                                _
+                  ___                          (_)
+                _/XXX\
+ _             /XXXXXX\_                                    __
+ X\__    __   /X XXXX XX\                          _       /XX\__      ___
+     \__/  \_/__       \ \                       _/X\__   /XX XXX\____/XXX\
+   \  ___   \/  \_      \ \               __   _/      \_/  _/  -   __  -  \__/
+  ___/   \__/   \ \__     \\__           /  \_//  _ _ \  \     __  /  \____//
+ /  __    \  /     \ \_   _//_\___     _/    //           \___/  \/     __/
+ __/_______\________\__\_/________\_ _/_____/_____________/_______\____/_______
+                                   /|\
+                                  / | \
+                                 /  |  \
+                                /   |   \
+                               /    |    \
+                              /     |     \
+                             /      |      \
+                            /       |       \
+                           /        |        \
+                          /         |         \
+    </pre>
+  </div>
+
+  <!-- ASCII 3 -->
+  <div class="ascii-block">
+    <button class="copy-btn" onclick="copyAscii('a3')">Copy</button>
+    <pre id="a3">
+@             _________
+ \____       /         \
+ /    \     /   ____    \
+ \_    \   /   /    \    \
+   \    \ (    \__/  )    )
+    \    \_\ \______/    /
+     \      \           /___
+      \______\_________/____"-_
+    </pre>
+  </div>
+
+  <!-- ASCII 4 -->
+  <div class="ascii-block">
+    <button class="copy-btn" onclick="copyAscii('a4')">Copy</button>
+    <pre id="a4">
+            oooooooooooooooooooooooooooooooooooooooooooooo
+   ooo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ooo
+  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o
+ $$$$$   $$$"    "$$$$$"    "$     $     $  "$  $$$$$"    "$  "$  $$$
+ $$$$"   "$$  $$oo$$$$$  $$oo$  $$$$  $$$$   "  $$$$$  $$  $   "  $$$
+o$$$$  $  $$o    "$$$$$o    "$    $$     $      $$$$$  $$  $      $$$o
+$$$$   o   $""$$  $$$$$""$$  $  $$$$  $$$$  o   $$$$$  $$  $  o   $$$$
+$$$$  $$$  $o    o$$$$$o    o$     $     $  $o  $$$$$o    o$  $o  $$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    </pre>
+  </div>
+
+</main>
+
+<footer>
+  © Street0 Code
+</footer>
 
 </body>
 </html>
